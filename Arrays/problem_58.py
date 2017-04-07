@@ -1,5 +1,5 @@
 """
-Bubble sort
+Bubble Sort
 """
 
 
