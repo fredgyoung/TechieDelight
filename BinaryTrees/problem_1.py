@@ -9,22 +9,20 @@ from Utils.stack import Stack
 
 # Recursive solution
 def is_identical(x, y):
-
     # If both trees are empty, return True
     if not x and not y:
         return True
 
     # If both trees are non-empty and the values of their root nodes match
-    # recursively check their chilcren
+    # recursively check their children
     return (x and y) and \
-        x.key == y.key and \
-        is_identical(x.left, y.left) and \
-        is_identical(x.right, y.right)
+           x.key == y.key and \
+           is_identical(x.left, y.left) and \
+           is_identical(x.right, y.right)
 
 
 # Iterative solution
 def is_identical_2(x, y):
-
     # If both trees are empty, return True
     if not x and not y:
         return True
@@ -67,8 +65,8 @@ def is_identical_2(x, y):
     # if we reach here both binary trees are identical
     return True
 
-def test_recursive():
 
+def test_recursive():
     x = Node(key=1)
     x.left = Node(key=2)
     x.right = Node(key=3)
@@ -93,7 +91,6 @@ def test_recursive():
 
 
 def test_iterative():
-
     x = Node(key=1)
     x.left = Node(key=2)
     x.right = Node(key=3)
@@ -124,4 +121,3 @@ if __name__ == '__main__':
         test_recursive()
     elif test == 2:
         test_iterative()
-
