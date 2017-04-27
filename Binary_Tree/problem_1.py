@@ -3,31 +3,8 @@ Write an efficient algorithm to check if two binary trees are identical or not.
 i.e. if they have identical structure & their contents are also same.
 """
 
-
-class Stack:
-
-    def __init__(self):
-        self.stack = []
-
-    def push(self, obj):
-        self.stack.append(obj)
-
-    def pop(self):
-        if len(self.stack) == 0:
-            return 'Error: Stack Underflow'
-        else:
-            return self.stack.pop()
-
-    def empty(self):
-        return len(self.stack) == 0
-
-
-class Node:
-
-    def __init__(self, key=None, left=None, right=None):
-        self.key = key
-        self.left = left
-        self.right = right
+from Utils.binary_tree import Node
+from Utils.stack import Stack
 
 
 # Recursive solution
@@ -140,27 +117,11 @@ def test_iterative():
     print(is_identical_2(x, y))
 
 
-def test_stack():
-
-    s = Stack()
-    s.push(1)
-    s.push(2)
-    s.push(3)
-    print(s.empty())
-    print(s.pop())
-    print(s.pop())
-    print(s.pop())
-    print(s.pop())
-    print(s.empty())
-
-
 if __name__ == '__main__':
 
-    test = 3
+    test = 1
     if test == 1:
         test_recursive()
     elif test == 2:
-        test_stack()
-    elif test == 3:
         test_iterative()
 
