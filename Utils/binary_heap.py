@@ -17,22 +17,10 @@ class BinaryHeap:
     def peek(self):
         return self.queue[-1]
 
-    def heapify_up(self, child):
-        parent = child // 2
-        if self.queue[parent] < self.queue[child]:
-            self.swap(parent, child)
-
     def swap(self, parent, child):
         temp = self.queue[parent]
         self.queue[parent] = self.queue[child]
         self.queue[child] = temp
-
-    def heapify_down(self):
-        pass
-
-    # parent = child // 2
-    # left child = parent * 2
-    # right child = (parent * 2) + 1
 
 
 if __name__ == '__main__':
